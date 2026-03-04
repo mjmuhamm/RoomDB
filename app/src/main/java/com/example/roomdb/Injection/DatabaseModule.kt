@@ -9,11 +9,13 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
+
 
 //return instance of database object and inject in DAO
 @Module
-@InstallIn(Singleton::class)
+@InstallIn(SingletonComponent::class)
 object DatabaseModule {
 
     @Provides
